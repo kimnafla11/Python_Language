@@ -1,0 +1,77 @@
+# 작성자 : 2014314005김나은
+# 프로그래밍과 데이터분석 과제2
+
+# 기본1.
+# 1~100까지 숫자중 홀수만 출력하는 프로그램
+for i in range(1,101):
+    if i % 2 == 1:
+        print(i)
+
+
+# 기본2.
+# 1단부터 9단까지 순서대로 구구단 출력
+for i in range(1,10):
+    for j in range(1,10):
+        print("%d * %d = %d" %(i,j,i*j))
+
+
+
+# 기본3.
+# 9단부터 1단까지 구구단 (앞 숫자만 역순, 뒤 숫자는 순서대로)
+for i in range(9,0,-1):
+    for j in range(1,10):
+        print("%d * %d = %d" %(i,j,i*j))        
+
+
+
+# 기본4.
+# 앞 숫자 2,5단 제외하고 출력
+for i in range(1,10):
+    if i != 2 and i != 5:
+        for j in range(1,10):
+            print("%d * %d = %d" %(i,j,i*j))
+
+
+
+# 기본5.
+for i in range(1,6):
+    print('*'*i,end='')
+    print('')
+
+
+
+# 기본6.
+for i in range(5,0,-1):
+    print('*'*i,end='')
+    print('')
+
+
+
+# 과제2-7.
+# array리스트에 [1,2,5,6,8,9,11,31,26,29]할당, 입력받은 정수가 array에 있는지 판별
+array = [1,2,5,6,8,9,11,31,26,29]
+a = int(input('정수 입력 : '))
+
+if a in array:
+    print('%d 는 array리스트에 있음'%a)
+else:
+    print('%d 는 array리스트에 없음'%a)
+    
+
+
+
+# 과제2-8.
+# 원 중심 나타내는 점의 좌표, 반지름, 다른 한 점의 좌표를 받아 이 점이 원의 내부인지 판별
+x = int(input("x 좌표 입력 : "))
+y = int(input("y 좌표 입력 : "))
+r = int(input("반지름 입력(정수) : "))
+
+x1 = int(input("x1 좌표 입력 : "))
+y1 = int(input("y1 좌표 입력 : "))
+
+d = ((x-x1)**2+(y-y1)**2)**1/2 #두 점 사이 거리
+
+if d > r :
+    print('원 내부 아님')
+else:
+    print('원 내부')
